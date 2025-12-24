@@ -11,7 +11,9 @@ body {
     display: flex;
 }
 .grid {
-    flex: 1;
-    background: black;
+    /*flex: 1;*/
+    background: white;
     border: solid red;
+    width: 100px;
+    height: 100px;
 }
