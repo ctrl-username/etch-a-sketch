@@ -13,11 +13,11 @@ function createGrid(size) {
         for(let gridsize = 1; gridsize <= size; gridsize ++){
             let grid = []
           grid[gridsize] =  document.createElement('div')
-
-            grid[gridsize].setAttribute("class", `grid${gridsize}`);
-            
+// add grid and grids class to created div
+            grid[gridsize].setAttribute("class", `grid${gridsize} grids`);
+ // add div to grid container           
             gridContainer.append(grid[gridsize])
         }
 }
 
-createGrid(20)
+createGrid(16)
