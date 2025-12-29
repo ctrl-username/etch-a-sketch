@@ -27,6 +27,8 @@ function createGrid(size) {
 // add grid and grids class to created div
              grid.setAttribute("class", `grid${gridsize} grids`);
             gridSquareSize(grid, containerWidth, size)
+            //
+            hoverEffect(grid)
  // add div to grid container           
             gridContainer.append(grid)
         }
@@ -40,4 +42,19 @@ function gridSquareSize(gridbox, cwidth, gridsize) {
     gridbox.style.height = `${length}px`
 }
 
-createGrid(100)
+// create hover 
+function hoverEffect(grid) {
+    grid.addEventListener("mouseover", () => {
+        
+        grid.style.backgroundColor = "black"
+
+    })
+    
+}
+
+
+
+
+
+
+createGrid(70)
