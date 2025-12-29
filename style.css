@@ -1,6 +1,8 @@
 * {
     padding: 0;
     box-sizing:border-box;
+    align-items:center;
+    justify-content:center;
     margin: 0;
 }
 
@@ -13,16 +15,17 @@ body {
     border:2px solid  black;
     width: 404px;
     height: 404px;
-}
+  
+    justify-content:center;}
 
 .grid-container{
-    display:flex;
+    display:flex; 
+    align-items:center;
+    justify-content:center;
     flex-wrap:wrap;
-    width: 400px;
-    height: 400px;
 }
 .grids{
     background: white;
-     border: solid 0.5px ;
+     border: solid 0.5px grey ;
      flex-shrink:0;
 }
