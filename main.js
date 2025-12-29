@@ -1,6 +1,11 @@
 //  create a 16 x 16 grid of square d:ivs // use flexbox to make the divs appear as a grid
 // set up hover effect so grid change color when hovered
+//
 // add button user can use to set grid size
+//
+//reference to body element
+const body = document.querySelector("body")
+
 // grid container width
 const containerWidth =400 
 //reference to sketch pad main container 
@@ -42,7 +47,7 @@ function gridSquareSize(gridbox, cwidth, gridsize) {
     gridbox.style.height = `${length}px`
 }
 
-// create hover 
+// create hover effect grid 
 function hoverEffect(grid) {
     grid.addEventListener("mouseover", () => {
         
@@ -57,4 +62,4 @@ function hoverEffect(grid) {
 
 
 
-createGrid(70)
+createGrid(100)
