@@ -1,30 +1,28 @@
 * {
     padding: 0;
+    box-sizing:border-box;
     margin: 0;
 }
 
 body {
     display: flex;
     justify-content:center;
+    padding-top:10px;
 }
 .container {
-    border:5px solid  black;
-    width:400px;
-    
+    border:2px solid  black;
+    width: 404px;
+    height: 404px;
 }
 
 .grid-container{
     display:flex;
     flex-wrap:wrap;
-    width: 100%;
-    margin:0px
+    width: 400px;
+    height: 400px;
 }
 .grids{
-    
     background: white;
-    border: none red;
-     outline-style: solid;
-  outline-color: green;
-    width: 25px;
-    height:25px;
+     border: solid 0.5px ;
+     flex-shrink:0;
 }
