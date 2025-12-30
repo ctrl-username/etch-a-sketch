@@ -3,23 +3,25 @@
 //
 // add button user can use to set grid size
 //
-//reference to body element
-const body = document.querySelector("body")
+//reference to body element for adding range input at DOM top
+const body = document.querySelector(".resize-grid")
 // function to create  grid size adjustment button
 
 function gridSize() {
- let size;
-
+ let sizeUi = document.querySelector("span")
+    
     const resizeGrid = document.createElement("input")
    // resizeGrid.innerHTML = "Adjust grid size"
-    resizeGrid.setAttribute("style", "margin:5px;")
+    resizeGrid.setAttribute("style", "margin:2px;")
     resizeGrid.setAttribute("type", "range")
     resizeGrid.setAttribute("min", "16")
     resizeGrid.setAttribute("max", "100")
     resizeGrid.setAttribute("step", "1")
+    resizeGrid.setAttribute("value", "16")
         console.log(resizeGrid.value)
     body.prepend(resizeGrid)
-
+     
+    sizeUi.innerHTML = `${resizeGrid.value} X ${resizeGrid.value}`
     
 
     resizeGrid.addEventListener("change", () => {
@@ -29,6 +31,7 @@ function gridSize() {
 
             createGrid(resizeGrid.value)
             
+    sizeUi.innerHTML = `${resizeGrid.value} X ${resizeGrid.value}`
         }
         //size = resizeGrid.value;
        }  )
