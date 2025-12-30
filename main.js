@@ -8,17 +8,36 @@ const body = document.querySelector("body")
 // function to create  grid size adjustment button
 
 function gridSize() {
+ let size;
 
-    const resizeButton = document.createElement("button")
-    resizeButton.innerHTML = "Adjust grid size"
-    resizeButton.setAttribute("style", "margin:5px;")
-
-    body.prepend(resizeButton)
+    const resizeGrid = document.createElement("input")
+   // resizeGrid.innerHTML = "Adjust grid size"
+    resizeGrid.setAttribute("style", "margin:5px;")
+    resizeGrid.setAttribute("type", "range")
+    resizeGrid.setAttribute("min", "16")
+    resizeGrid.setAttribute("max", "100")
+    resizeGrid.setAttribute("step", "1")
+        console.log(resizeGrid.value)
+    body.prepend(resizeGrid)
 
     
+
+    resizeGrid.addEventListener("change", () => {
+        if(gridContainer.value != "")
+        {
+            gridContainer.innerHTML = "";
+
+            createGrid(resizeGrid.value)
+            
+        }
+        //size = resizeGrid.value;
+       }  )
+      // createGrid((size - 0))
+ createGrid(resizeGrid.value)
+
+
 }
 
-gridSize()
 // grid container width
 const containerWidth =400 
 //reference to sketch pad main container 
@@ -75,4 +94,4 @@ function hoverEffect(grid) {
 
 
 
-createGrid(100)
+gridSize()
