@@ -5,7 +5,20 @@
 //
 //reference to body element
 const body = document.querySelector("body")
+// function to create  grid size adjustment button
 
+function gridSize() {
+
+    const resizeButton = document.createElement("button")
+    resizeButton.innerHTML = "Adjust grid size"
+    resizeButton.setAttribute("style", "margin:5px;")
+
+    body.prepend(resizeButton)
+
+    
+}
+
+gridSize()
 // grid container width
 const containerWidth =400 
 //reference to sketch pad main container 
