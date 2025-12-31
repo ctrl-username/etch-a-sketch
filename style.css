@@ -36,4 +36,7 @@ body {
     display:flex;
 
 }
-    
+   
+button{
+    margin:5px;
+}
