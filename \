@@ -10,14 +10,14 @@ body {
     display: flex;
     justify-content:center;
     padding-top:5px;
+    padding-bottom:5px;
     flex-direction: column;
 }
 .container {
     border:2px solid  black;
     width: 404px;
     height: 404px;
-    
-    margin-bottom:5px;
+  
     justify-content:center;}
 
 .grid-container{
