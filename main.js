@@ -7,9 +7,11 @@
 const body = document.querySelector(".resize-grid")
 // function to create  grid size adjustment button
 
-function gridSize() {
- let sizeUi = document.querySelector("span")
-    
+function gridManager() {
+    // reference to grid size ui span element
+ const sizeUi = document.querySelector("span")
+   //range input value
+    let rangeInputValue = 22;
     const resizeGrid = document.createElement("input")
    // resizeGrid.innerHTML = "Adjust grid size"
     resizeGrid.setAttribute("style", "margin:2px;")
@@ -20,24 +22,43 @@ function gridSize() {
     resizeGrid.setAttribute("value", "16")
         console.log(resizeGrid.value)
     body.prepend(resizeGrid)
-     
+     // set grid size ui element value to current range input value
     sizeUi.innerHTML = `${resizeGrid.value} X ${resizeGrid.value}`
-    
+//    rangeInputValue = resizeGrid.value
 
     resizeGrid.addEventListener("change", () => {
         if(gridContainer.value != "")
         {
             gridContainer.innerHTML = "";
+            rangeInputValue = resizeGrid.value;
 
-            createGrid(resizeGrid.value)
-            
+            createGrid(rangeInputValue)
+     // update grid size ui element value to new range value       
     sizeUi.innerHTML = `${resizeGrid.value} X ${resizeGrid.value}`
         }
-        //size = resizeGrid.value;
        }  )
-      // createGrid((size - 0))
- createGrid(resizeGrid.value)
+ createGrid(rangeInputValue);
 
+
+
+
+// create clear button function 
+function clearPad() {
+     //create clear button
+    const clearButton = document.createElement('button')
+    clearButton.innerHTML = "Clean Pad"
+    
+    body.insertAdjacentElement('afterend',clearButton)
+
+    clearButton.addEventListener("click", () => {
+         gridContainer.innerHTML = "";
+        createGrid(rangeInputValue)
+    }
+    ) 
+}
+
+
+    clearPad()
 
 }
 
@@ -94,7 +115,4 @@ function hoverEffect(grid) {
 
 
 
-
-
-
-gridSize()
+gridManager()
