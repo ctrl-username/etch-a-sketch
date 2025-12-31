@@ -28,7 +28,7 @@ body {
 }
 .grids{
     background: white;
-     border: solid 0.5px grey ;
+     border: none 0.5px grey ;
      flex-shrink:0;
 }
 
