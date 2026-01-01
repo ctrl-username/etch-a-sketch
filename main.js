@@ -11,7 +11,7 @@ function gridManager() {
     // reference to grid size ui span element
  const sizeUi = document.querySelector("span")
    //range input value
-    let rangeInputValue = 22;
+    let rangeInputValue = 16;
     const resizeGrid = document.createElement("input")
    // resizeGrid.innerHTML = "Adjust grid size"
     resizeGrid.setAttribute("style", "margin:2px;")
@@ -82,7 +82,8 @@ gridBox.append(gridContainer)
 
 // function for creating grid
 function createGrid(size) {
-        for(let gridsize = 1; gridsize <= size*size; gridsize ++){
+    if(size > 15 &&  size < 101){
+ for(let gridsize = 1; gridsize <= size*size; gridsize ++){
             let grid ;
           grid  =  document.createElement('div')
 // add grid and grids class to created div
@@ -93,8 +94,10 @@ function createGrid(size) {
  // add div to grid container           
             gridContainer.append(grid)
         }
-}
 
+
+       }else { document.querySelector("body").innerHTML = "You're a hacker"}
+}
 // create grid square size 
 
 function gridSquareSize(gridbox, cwidth, gridsize) {
@@ -116,3 +119,6 @@ function hoverEffect(grid) {
 
 
 gridManager()
+
+// enable random color effect
+// enable
