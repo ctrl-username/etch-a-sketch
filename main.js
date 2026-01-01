@@ -121,4 +121,4 @@ function hoverEffect(grid) {
 gridManager()
 
 // enable random color effect
-// enable
+// enable 
